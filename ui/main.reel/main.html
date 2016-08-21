@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8" />
+    <title>
+        Main
+    </title>
+    <link rel="stylesheet" href="main.css" />
+    <script type="text/montage-serialization">{"owner":{"properties":{"element":{"#":"main"}}},"actionEventListener":{"prototype":"montage/core/event/action-event-listener","properties":{"action":"addContent","handler":{"@":"tasksController"}},"_dev":{"isHidden":true}},"addTaskButton":{"prototype":"digit/ui/button.reel","properties":{"element":{"#":"addTaskButton"},"enabled":true,"label":"Add Task"},"listeners":[{"type":"action","useCapture":false,"listener":{"@":"actionEventListener"}}]},"badge":{"prototype":"digit/ui/badge.reel","properties":{"element":{"#":"badge"}},"bindings":{"value":{"<-":"@tasksController.organizedContent.filter{!completed}.length"}}},"clearCompletedButton":{"prototype":"digit/ui/button.reel","properties":{"element":{"#":"clearCompletedButton"},"enabled":false,"label":"Clear Completed"},"bindings":{"enabled":{"<-":"@tasksController.content.filter{completed}.length > 0"}},"listeners":[{"type":"action","useCapture":false,"listener":{"@":"owner"}}]},"taskCell":{"prototype":"ui/task-cell.reel","properties":{"element":{"#":"taskCell"}},"bindings":{"task":{"<-":"@taskList:iteration.object"}}},"taskList":{"prototype":"digit/ui/list.reel","properties":{"element":{"#":"taskList"},"contentController":{"@":"tasksController"}}},"tasksController":{"prototype":"montage/core/range-controller"},"title":{"prototype":"digit/ui/title.reel","properties":{"element":{"#":"title"},"value":"Things To Do"}}}</script>
+</head>
+<body>
+    <div data-montage-id="main" data-montage-skin="light" class="Main">
+        <h1 data-montage-id="title"></h1>
+        <button data-montage-id="addTaskButton">
+
+        </button>
+        <output data-montage-id="badge">
+
+        </output>
+        <button data-montage-id="clearCompletedButton"></button>
+        <ul data-montage-id="taskList">
+            <li data-montage-id="taskCell">
+                Item
+            </li>
+        </ul>
+    </div>
+
+</body></html>

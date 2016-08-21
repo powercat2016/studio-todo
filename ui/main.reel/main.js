@@ -1,0 +1,1 @@
+var Component=require("montage/ui/component").Component;exports.Main=Component.specialize({constructor:{value:function(){this.super()}},handleClearCompletedButtonAction:{value:function(){var e=this.templateObjects.tasksController,t=e.getPath("content.filter{completed}");e.deleteEach(t)}}});
